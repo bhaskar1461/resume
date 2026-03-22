@@ -1,123 +1,69 @@
-## 🌟 Sumanth Samala's Netflix inspired Portfolio 🌟 - https://sumanthsamala.com/
+# Bhaskar Sharma Resume
 
-Welcome to my personal portfolio project! 🚀 This website showcases my work, skills, and experiences in web development. It's designed to be lightweight, customizable, and professional while maintaining an approachable style.
+Single-page React resume tailored for software engineering, backend, and data-focused roles. The app is self-contained, ATS-friendly, and ready to build for Azure deployment without relying on external CMS content.
 
-Explore specific subdomains tailored to different tech stacks:
+## Tech Stack
 
-- 🌟 [java.sumanthsamala.com](https://java.sumanthsamala.com/) for Java Spring Boot-related work.
-- 🌟 [node.sumanthsamala.com](https://node.sumanthsamala.com/) for Node.js and backend development.
-- 🌟 [frontend.sumanthsamala.com](https://frontend.sumanthsamala.com/) for frontend development expertise.
-- 🌟 [ror.sumanthsamala.com](https://ror.sumanthsamala.com/) for Ruby on Rails projects.
+- React
+- TypeScript
+- CSS
+- Create React App build pipeline
 
-![Screenshot from 2024-12-08 19-19-06](https://github.com/user-attachments/assets/f8220485-16ec-48cf-8cb2-7853540c5724)
+## Local Development
 
----
+Use Node `20.x` to match the project runtime.
 
-## ✨ Features
-
-- 🌍 **Dynamic Content**: Powered by [DatoCMS](https://www.datocms.com) for easy content management.
-- ⚡ **Fast & Responsive**: Built with modern web technologies for seamless performance.
-- 🎨 **Customizable**: Modular and easy to adapt to your own needs.
-- 📈 **Professional Yet Personal**: Highlights projects, skills, and achievements.
-- 🎨 It can support various por
-
----
-
-## 🛠️ Tech Stack
-
-This portfolio is built with love and:
-
-- ⚛️ **React** (Frontend)
-- ☁️ **AWS S3 & CloudFront** (Hosting and CDN)
-- 🖌️ **Tailwind CSS** (Styling)
-- 🛡️ **DatoCMS** (Content Management)
-- 🧩 **Other Cool Tools**: GitHub Actions
-
----
-
-## ⭐ Show Your Support
-
-If you find this project helpful or inspiring, give it a ⭐ on GitHub—it means the world to me! 🌟
-
-Happy coding! 💻✨
-
----
-
-## 📚 Getting Started
-
-Want to set this up locally? Follow these steps:
-
-1. **Clone the Repository**: Copy the repository to your local system.
-2. **Install Dependencies**: Use a package manager to install the required dependencies.
+1. Install dependencies:
 
 ```bash
-nvm install 18
-nvm use 18
+npm ci
 ```
 
-After upgrading Node.js, clear your node_modules and reinstall:
-
-```bash
-rm -rf node_modules
-npm cache clean --force
-npm install
-```
-
-3. **Configure Environment Variables**: Create a `.env` file and set up the necessary API keys and configurations.
-4. **Run the Project**: Start the development server.
+2. Start the dev server:
 
 ```bash
 npm start
 ```
 
-5. **Visit the Local Server**: Open your browser and navigate to the local server URL.
-   ![alt text](image.png)
+3. Create a production build:
 
----
+```bash
+npm run build
+```
 
-## 🤝 Contribution Guidelines
+## Azure Deployment
 
-Contributions are welcome and appreciated! 🥳 To contribute:
+### Azure Static Web Apps
 
-1. Fork the repository.
-2. Create a new branch for your feature or fix.
-3. Commit your changes with a descriptive message.
-4. Push your changes to your branch.
-5. Open a Pull Request. 🎉
+Recommended for this project.
 
----
+1. Push this code to your own GitHub repository.
+2. In the Azure portal, create a `Static Web App`.
+3. Choose `GitHub` as the source and connect your repository and `main` branch.
+4. Use these build settings:
+   App location: `/`
+   Api location: leave empty
+   Output location: `build`
+5. Azure can generate a workflow automatically, or you can use the included workflow at `.github/workflows/azure-static-web-apps.yml`.
+6. If you use the included workflow manually, add the repository secret `AZURE_STATIC_WEB_APPS_API_TOKEN` from your Static Web App deployment token.
+7. `public/staticwebapp.config.json` is included so refreshes and direct links work correctly after deployment.
 
-## 🐛 Issues and Feature Requests
+Current repo note:
 
-Found a bug? Have a feature in mind? 🤔 Feel free to raise an issue or suggest a feature!
+- The current `origin` remote still points to the original template repository, so push this resume to a repository under your own GitHub account before connecting Azure.
 
-1. Go to the **Issues** tab in the repository.
-2. Click **New Issue**.
-3. Provide a clear description of the bug or feature request.
-4. If applicable, include screenshots or steps to reproduce the issue.
+### Azure App Service
 
-Your feedback is valuable and helps make this project better for everyone. Thank you for contributing!
+1. Build the app with `npm run build`.
+2. Upload the contents of `build/`.
+3. `public/web.config` is included so the site can serve the React app correctly on Azure App Service / IIS.
 
----
+## Resume Content
 
-## 🌟 Acknowledgments
+The resume is centered on:
 
-- Thanks to [DatoCMS](https://www.datocms.com) for powering the dynamic content.
-- Inspired by countless developers in the open-source community. 💻
-- Special shoutout to all contributors—you rock! 🤘
-
----
-
-## 📧 Contact Me
-
-- 💼 [Portfolio Website](https://sumanthsamala.com)
-- 📧 Email: [chintusamala96@gmail.com](mailto:chintusamala96@gmail.com)
-- 🔗 [LinkedIn](https://uk.linkedin.com/in/sumanth-samala-82431161)
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License. Feel free to use it, modify it, and share it! 🌈
-
----
+- Backend development
+- REST APIs
+- Database systems
+- Cloud deployment basics
+- Data engineering interest areas such as ETL and scalable services
