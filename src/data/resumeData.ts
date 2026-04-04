@@ -40,14 +40,14 @@ export interface ResumeData {
 
 export const resumeData: ResumeData = {
   name: 'Bhaskar Sharma',
-  headline: 'Backend Engineer | API Development, Data Systems, and Database-Driven Applications',
+  headline: 'Backend Engineer Intern Candidate | APIs, Data Systems, and Server-Side Development',
   summary:
-    'Backend-focused engineering student building API-driven applications, modular backend services, and database-backed workflows with Python and SQL. Delivers REST APIs, structured data handling, and production-minded service design for software systems that require reliable communication, clean architecture, and maintainable backend logic.',
+    'Backend-focused Computer Science student building REST APIs, database-driven applications, and server-side workflows with Python and SQL. Experienced in API design, CRUD operations, authentication flows, and data handling for maintainable backend systems with clean architecture and reliable application logic.',
   focusAreas: [
-    'Backend Development',
-    'REST API Engineering',
-    'Data Engineering',
-    'Database Systems',
+    'Backend Engineer Intern',
+    'API Development',
+    'Data Systems',
+    'Database Design',
   ],
   contact: {
     email: 'bhaskar2004sharma@gmail.com',
@@ -57,15 +57,47 @@ export const resumeData: ResumeData = {
   skillGroups: [
     {
       title: 'Backend & APIs',
-      items: ['Flask', 'FastAPI', 'REST APIs'],
+      items: [
+        'Flask',
+        'FastAPI',
+        'REST APIs',
+        'API Design',
+        'CRUD Operations',
+        'Server-side Development',
+      ],
     },
     {
-      title: 'Databases',
-      items: ['MySQL', 'Supabase'],
+      title: 'Databases & Data',
+      items: [
+        'MySQL',
+        'Supabase',
+        'Database Design',
+        'Data Modeling',
+        'Query Optimization',
+        'ETL Pipelines',
+      ],
+    },
+    {
+      title: 'Engineering Concepts',
+      items: [
+        'Scalable Systems',
+        'System Design',
+        'Performance Optimization',
+        'Error Handling',
+        'Logging',
+      ],
     },
     {
       title: 'Tools & Cloud',
-      items: ['Postman', 'Git', 'GitHub', 'Docker', 'Azure', 'Vercel'],
+      items: [
+        'Postman',
+        'Git',
+        'GitHub',
+        'Docker (Containerization)',
+        'Azure',
+        'Vercel',
+        'CI/CD Basics',
+      ],
     },
     {
       title: 'Languages',
@@ -81,23 +113,25 @@ export const resumeData: ResumeData = {
     {
       title: 'Python Full Stack Web Development Training',
       details:
-        'Completed training with emphasis on backend application development using Flask, REST API design, database integration, and Postman-based API testing.',
+        'Completed training focused on Flask-based backend development, REST API implementation, database integration, and API testing using Postman.',
     },
   ],
   highlights: [
-    'Built backend systems around clear API contracts, structured request handling, and database-backed workflows to support maintainable application logic.',
-    'Used Postman, Git, GitHub, Docker, Azure, and Vercel in development and deployment workflows for iterative backend delivery.',
-    'Positioned for backend engineering and data systems roles that value service design, API reliability, and practical data handling.',
+    'Build backend systems around clear API contracts, structured request handling, and database-backed workflows that support maintainable application logic.',
+    'Apply practical software engineering principles including clean architecture, error-aware backend logic, and reliable data flow across application workflows.',
+    'Comfortable using Postman, Git, GitHub, Docker, Azure, and Vercel in project-based development and deployment workflows.',
   ],
   project: {
     name: 'Helpdesk Management System',
     tagline: 'Backend and database contribution for a ticketing workflow platform',
     stack: ['Flask', 'SQLAlchemy', 'SQLite', 'Python', 'HTML/CSS'],
     bullets: [
-      'Contributed to the backend and database layer of a helpdesk management system built with Flask and SQLAlchemy, supporting student, admin, authority, notification, feedback, and ticket workflows.',
-      'Implemented database-backed ticket lifecycle logic for creation, assignment, in-progress tracking, completion, and reopening, helping maintain consistent workflow state across the application.',
-      'Worked on role-based backend flows for login, registration, dashboard access, admin ticket management, and feedback submission using session-driven request handling and secure password hashing.',
-      'Helped structure the data model and persistence layer for reliable ticket records, authority mapping, and notification updates, improving maintainability of the core backend workflow.',
+      'Contributed to the backend and database layer of a helpdesk management system that manages ticket creation, assignment, resolution tracking, notifications, and feedback workflows for student support use cases.',
+      'Designed and implemented server-side CRUD flows for ticket creation, status updates, authority assignment, and feedback submission using Flask and SQLAlchemy.',
+      'Built authentication-driven request handling for student and admin access using secure password hashing and session-based authorization to protect workflow actions and user data.',
+      'Structured relational database models for students, tickets, authorities, notifications, and feedback, improving data consistency and maintainability across the core application workflow.',
+      'Improved backend workflow handling for unassigned, in-progress, and completed tickets, supporting sub-second response handling for core dashboard and ticket-management actions.',
+      'Helped shape a production-style backend architecture that keeps business logic, persistence, and workflow rules modular and extensible for future scaling.',
     ],
   },
 };
