@@ -10,6 +10,17 @@ export interface ResumeProject {
   bullets: string[];
 }
 
+export interface ResumeEducation {
+  degree: string;
+  institution: string;
+  details: string;
+}
+
+export interface ResumeTraining {
+  title: string;
+  details: string;
+}
+
 export interface ResumeData {
   name: string;
   headline: string;
@@ -21,20 +32,22 @@ export interface ResumeData {
     linkedin: string;
   };
   skillGroups: ResumeSkillGroup[];
+  education: ResumeEducation;
+  training: ResumeTraining[];
   highlights: string[];
   project: ResumeProject;
 }
 
 export const resumeData: ResumeData = {
   name: 'Bhaskar Sharma',
-  headline: 'Computer Science Student | Backend Development, REST APIs, and Data Systems',
+  headline: 'Backend Engineer | API Development, Data Systems, and Database-Driven Applications',
   summary:
-    'Computer Science student with experience in backend development, REST APIs, and database systems. Skilled in Python, SQL, and Git, with hands-on experience building web applications and API-driven platforms. Interested in scalable systems and data-intensive environments.',
+    'Backend-focused engineering student building API-driven applications, modular backend services, and database-backed workflows with Python and SQL. Delivers REST APIs, structured data handling, and production-minded service design for software systems that require reliable communication, clean architecture, and maintainable backend logic.',
   focusAreas: [
-    'Software Engineering',
     'Backend Development',
+    'REST API Engineering',
     'Data Engineering',
-    'API Platforms',
+    'Database Systems',
   ],
   contact: {
     email: 'bhaskar2004sharma@gmail.com',
@@ -43,36 +56,48 @@ export const resumeData: ResumeData = {
   },
   skillGroups: [
     {
+      title: 'Backend & APIs',
+      items: ['Flask', 'FastAPI', 'REST APIs'],
+    },
+    {
+      title: 'Databases',
+      items: ['MySQL', 'Supabase'],
+    },
+    {
+      title: 'Tools & Cloud',
+      items: ['Postman', 'Git', 'GitHub', 'Docker', 'Azure', 'Vercel'],
+    },
+    {
       title: 'Languages',
-      items: ['Python', 'JavaScript', 'SQL', 'HTML', 'CSS'],
+      items: ['Python', 'JavaScript (Basic)', 'SQL'],
     },
+  ],
+  education: {
+    degree: 'B.Tech in Computer Science and Engineering',
+    institution: 'Sreenidhi Institute of Science and Technology',
+    details: '3rd Year, 2nd Semester | Expected Graduation: 2027',
+  },
+  training: [
     {
-      title: 'Frameworks & APIs',
-      items: ['FastAPI', 'Fastify', 'Next.js', 'REST APIs', 'API-Driven Platforms'],
-    },
-    {
-      title: 'Databases & Data',
-      items: ['MySQL', 'Supabase', 'Database Systems', 'ETL Pipelines'],
-    },
-    {
-      title: 'Cloud & Tools',
-      items: ['Git', 'GitHub', 'Docker', 'Azure', 'Vercel'],
+      title: 'Python Full Stack Web Development Training',
+      details:
+        'Completed training with emphasis on backend application development using Flask, REST API design, database integration, and Postman-based API testing.',
     },
   ],
   highlights: [
-    'Built backend systems and REST APIs for web applications with a focus on maintainable services, clear contracts, and database-backed workflows.',
-    'Worked with cloud deployment tooling and modern collaboration workflows using Docker, Azure, Vercel, Git, and GitHub.',
-    'Strong interest in scalable backend systems, ETL pipelines, and data-intensive environments that require reliable data flow and service design.',
+    'Built backend systems around clear API contracts, structured request handling, and database-backed workflows to support maintainable application logic.',
+    'Used Postman, Git, GitHub, Docker, Azure, and Vercel in development and deployment workflows for iterative backend delivery.',
+    'Positioned for backend engineering and data systems roles that value service design, API reliability, and practical data handling.',
   ],
   project: {
-    name: 'Anylical Engine',
-    tagline: 'Gen-Z focused stock intelligence platform',
-    stack: ['Next.js', 'Fastify', 'FastAPI', 'Supabase', 'TypeScript'],
+    name: 'Helpdesk Management System',
+    tagline: 'Backend and database contribution for a ticketing workflow platform',
+    stack: ['Flask', 'SQLAlchemy', 'SQLite', 'Python', 'HTML/CSS'],
     bullets: [
-      'Engineered a full-stack monorepo for a Gen-Z-focused stock intelligence platform using Next.js, Fastify, FastAPI, and Supabase.',
-      'Built deterministic intelligence engines that produced auditable trust scores and compliance-first AI insights for transparent stock analysis workflows.',
-      'Designed modular services and shared TypeScript interfaces to keep frontend, backend, and intelligence layers aligned as the platform scaled.',
-      'Structured backend and data flows to support maintainable integrations, production-oriented architecture, and reliable API communication.',
+      'Contributed to the backend and database layer of a helpdesk management system built with Flask and SQLAlchemy, supporting student, admin, authority, notification, feedback, and ticket workflows.',
+      'Implemented database-backed ticket lifecycle logic for creation, assignment, in-progress tracking, completion, and reopening, helping maintain consistent workflow state across the application.',
+      'Worked on role-based backend flows for login, registration, dashboard access, admin ticket management, and feedback submission using session-driven request handling and secure password hashing.',
+      'Helped structure the data model and persistence layer for reliable ticket records, authority mapping, and notification updates, improving maintainability of the core backend workflow.',
     ],
   },
 };

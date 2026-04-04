@@ -3,8 +3,18 @@ import './ResumePage.css';
 import { resumeData } from '../data/resumeData';
 
 const ResumePage: React.FC = () => {
-  const { name, headline, summary, focusAreas, contact, skillGroups, highlights, project } =
-    resumeData;
+  const {
+    name,
+    headline,
+    summary,
+    focusAreas,
+    contact,
+    skillGroups,
+    education,
+    training,
+    highlights,
+    project,
+  } = resumeData;
 
   return (
     <main className="resume-page">
@@ -67,7 +77,6 @@ const ResumePage: React.FC = () => {
         <section className="resume-section">
           <div className="section-heading">
             <h2>Technical Skills</h2>
-            <p>Keywords aligned for software engineering, backend, and data roles.</p>
           </div>
           <div className="skills-grid">
             {skillGroups.map((group) => (
@@ -82,19 +91,43 @@ const ResumePage: React.FC = () => {
         <section className="resume-section">
           <div className="section-heading">
             <h2>Selected Project</h2>
-            <p>{project.tagline}</p>
           </div>
           <div className="project-card">
             <div className="project-header">
               <h3>{project.name}</h3>
-              <p>{project.stack.join(' • ')}</p>
+              <p>{project.tagline}</p>
             </div>
+            <p className="project-stack">{project.stack.join(' • ')}</p>
             <ul className="bullet-list">
               {project.bullets.map((bullet) => (
                 <li key={bullet}>{bullet}</li>
               ))}
             </ul>
           </div>
+        </section>
+
+        <section className="resume-section two-column-section">
+          <section className="info-card" aria-label="Education">
+            <div className="section-heading compact-heading">
+              <h2>Education</h2>
+            </div>
+            <h3>{education.degree}</h3>
+            <p>{education.institution}</p>
+            <p className="muted-copy">{education.details}</p>
+          </section>
+
+          <section className="info-card" aria-label="Certification and Training">
+            <div className="section-heading compact-heading">
+              <h2>Certification & Training</h2>
+            </div>
+            <ul className="bullet-list compact-list">
+              {training.map((item) => (
+                <li key={item.title}>
+                  <strong>{item.title}:</strong> {item.details}
+                </li>
+              ))}
+            </ul>
+          </section>
         </section>
 
         <section className="resume-section">
